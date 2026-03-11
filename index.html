@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eid Mubarak - Wishes & Eidi Collection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animated Gradient Background */
+        body {
+            background: linear-gradient(135deg, #1a5f3e 0%, #2d8659 25%, #1a4d2e 50%, #0d3b23 75%, #1a5f3e 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Floating Stars Animation */
+        .star {
+            position: fixed;
+            width: 2px;
+            height: 2px;
+            background: #ffd700;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: twinkle 3s infinite, float 20s infinite linear;
+            pointer-events: none;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px) translateX(0px); }
+            100% { transform: translateY(-100vh) translateX(20px); }
+        }
+
+        /* Crescent Moon */
+        .moon {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #ffd700;
+            border-radius: 50%;
+            box-shadow: -8px -8px 0 -2px #1a5f3e;
+            animation: moonGlow 3s ease-in-out infinite;
+            z-index: 10;
+        }
+
+        @keyframes moonGlow {
+            0%, 100% { box-shadow: -8px -8px 0 -2px #1a5f3e; }
+            50% { box-shadow: -8px -8px 15px -2px rgba(255, 215, 0, 0.6); }
+        }
+
+        /* Hugging Animation (CSS Art) */
+        .hug-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin: 20px auto;
+        }
+
+        .person {
+            position: absolute;
+            width: 50px;
+            height: 70px;
+        }
+
+        .person-left {
+            left: 10px;
+            animation: hugLeft 3s ease-in-out infinite;
+        }
+
+        .person-right {
+            right: 10px;
+            animation: hugRight 3s ease-in-out infinite;
+        }
+
+        .head {
+            width: 30px;
+            height: 30px;
+            background: #daa520;
+            border-radius: 50%;
+            margin: 0 auto 5px;
+        }
+
+        .body {
+            width: 25px;
+            height: 30px;
+            background: #228b22;
+            margin: 0 auto;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .arms {
+            position: absolute;
+            width: 50px;
+            height: 8px;
+            top: 35px;
+        }
+
+        .arm {
+            position: absolute;
+            height: 8px;
+            background: #daa520;
+            border-radius: 4px;
+        }
+
+        .person-left .arms .arm-left {
+            width: 30px;
+            left: -30px;
+            animation: armLeftHug 3s ease-in-out infinite;
+        }
+
+        .person-right .arms .arm-right {
+            width: 30px;
+            right: -30px;
+            animation: armRightHug 3s ease-in-out infinite;
+        }
+
+        @keyframes hugLeft {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(15px); }
+        }
+
+        @keyframes hugRight {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(-15px); }
+        }
+
+        @keyframes armLeftHug {
+            0%, 100% { transform: rotateZ(-20deg); }
+            50% { transform: rotateZ(20deg); }
+        }
+
+        @keyframes armRightHug {
+            0%, 100% { transform: rotateZ(20deg); }
+            50% { transform: rotateZ(-20deg); }
+        }
+
+        /* Navigation Styles */
+        nav {
+            background: rgba(26, 95, 62, 0.95);
+            background-color: blur(10px);
+            border-bottom: 2px solid #ffd700;
+        }
+
+        nav button, nav select {
+            transition: all 0.3s ease;
+        }
+
+        nav button:hover, nav select:hover {
+            transform: scale(1.05);
+        }
+
+        /* Hero Section */
+        .hero-title {
+            background: linear-gradient(135deg, #ffd700 0%, #f9f9f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 2px 2px 4px rgba(21, 235, 178, 0.761);
+            animation: fadeInDown 1s ease;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Countdown Cards */
+        .countdown-card {
+            background: rgba(57, 5, 244, 0.526);
+            background-color: blur(10px);
+            border: 2px solid rgba(255, 0, 204, 0.491);
+            animation: slideUp 0.8s ease backwards;
+        }
+
+        .countdown-card:nth-child(1) { animation-delay: 0s; }
+        .countdown-card:nth-child(2) { animation-delay: 0.1s; }
+        .countdown-card:nth-child(3) { animation-delay: 0.2s; }
+        .countdown-card:nth-child(4) { animation-delay: 0.3s; }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .countdown-number {
+            color: #ffd700;
+            font-size: 3.5rem;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        .countdown-label {
+            color: #12f71d;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-top: 12px;
+        }
+
+        /* Input & Button Styles */
+        input, select {
+            background: rgba(4, 16, 4, 0.978) !important;
+            border: 2px solid #ffd700 !important;
+            color: rgb(233, 237, 231) !important;
+            transition: all 0.3s ease;
+        }
+
+        input::placeholder, select {
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+
+        input:focus, select:focus {
+            background: rgba(14, 0, 0, 0.256) !important;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4) !important;
+            outline: none !important;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            color: #1a5f3e;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+        }
+
+        .btn-primary:active {
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 215, 0, 0.2);
+            color: #ffd700;
+            border: 2px solid #ffd700;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            background: #ffd700;
+            color: #1a5f3e;
+            transform: scale(1.05);
+        }
+
+        /* Payment Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, #1a5f3e 0%, #2d8659 100%);
+            border: 2px solid #ffd700;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            animation: slideUpModal 0.3s ease;
+        }
+
+        @keyframes slideUpModal {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .payment-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 215, 0, 0.2);
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 15px;
+        }
+
+        .payment-option:hover {
+            background: rgba(255, 215, 0, 0.1);
+            border-color: #ffd700;
+            transform: translateY(-5px);
+        }
+
+        .payment-option i {
+            font-size: 2.5rem;
+            color: #ffd700;
+        }
+
+        .payment-option span {
+            color: white;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* QR Code Placeholder */
+        .qr-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            background: #f0f0f0;
+            border: 2px dashed #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #228b22;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            animation: slideInUp 0.3s ease;
+            z-index: 2000;
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Decorative Elements */
+        .decoration {
+            position: absolute;
+            opacity: 0.1;
+            font-size: 100px;
+            pointer-events: none;
+        }
+
+        .star-decoration {
+            animation: rotate 10s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .moon {
+                width: 40px;
+                height: 40px;
+                box-shadow: -5px -5px 0 -2px #1a5f3e;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .hero-title {
+                font-size: 1.5rem;
+            }
+
+            .countdown-number {
+                font-size: 1.75rem;
+            }
+
+            .modal-content {
+                padding: 25px;
+            }
+        }
+
+        /* Scroll Animation */
+        .scroll-animate {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Moon Decoration -->
+    <div class="moon"></div>
+
+    <!-- Floating Stars -->
+    <div id="starsContainer"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 px-4 py-4 md:px-8">
+        <div class="flex items-center justify-between flex-wrap gap-4">
+            <!-- Language Selector -->
+            <div class="flex items-center gap-2">
+                <i class="fas fa-globe text-yellow-400"></i>
+                <select id="languageSelect" class="px-3 py-2 rounded-lg font-semibold text-sm">
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी</option>
+                    <option value="ur">Urdu</option>
+                </select>
+            </div>
+
+            <!-- Share & Audio Controls -->
+            <div class="flex items-center gap-3 flex-wrap justify-end">
+                <button id="audioToggle" class="btn-secondary px-4 py-2 rounded-lg flex items-center gap-2 text-sm md:text-base">
+                    <i class="fas fa-volume-up"></i>
+                    <span id="audioLabel">Naat On</span>
+                </button>
+
+                <button id="shareBtn" class="btn-secondary px-4 py-2 rounded-lg flex items-center gap-2 text-sm md:text-base">
+                    <i class="fas fa-share-alt"></i>
+                    <span id="shareLabel">Share</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="min-h-screen flex flex-col items-center justify-center px-4 py-8 relative">
+        <!-- Decorative Elements -->
+        <!-- <div class="decoration" style="top: 10%; left: 5%;">⭐</div>
+        <div class="decoration" style="top: 20%; right: 8%;">✨</div>
+        <div class="decoration" style="bottom: 10%; left: 10%;">🌙</div> -->
+
+        <!-- Hero Section -->
+        <section class="w-full max-w-4xl text-center mb-12 scroll-animate">
+            <h1 class="hero-title text-4xl md:text-6xl font-bold mb-6">
+                <span id="greetingText">Your Friend Wishes You a Very Happy</span>
+                <br>
+                <span class="text-white text-3xl md:text-5xl">Eid Mubarak --</span>
+                <span class="text-white text-2xl md:text-4xl"> ईद मुबारक --</span>
+                <span class="text-white text-3xl md:text-5xl"> عید مبارک</span>
+            </h1>
+
+            <!-- Hugging Animation -->
+            <div class="hug-container">
+                <div class="person person-left">
+                    <div class="head"></div>
+                    <div class="body"></div>
+                    <div class="arms">
+                        <div class="arm arm-left"></div>
+                    </div>
+                </div>
+                <div class="person person-right">
+                    <div class="head"></div>
+                    <div class="body"></div>
+                    <div class="arms">
+                        <div class="arm arm-right"></div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-white text-lg md:text-xl mt-6" id="blessingText">May your day be filled with joy, peace, and prosperity!</p>
+        </section>
+
+        <!-- Countdown Section -->
+        <section class="w-full max-w-4xl mb-12 scroll-animate">
+            <h2 class="text-white text-2xl md:text-3xl font-bold text-center mb-8" id="countdownTitle">Eid Countdown</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="countdown-card p-6 rounded-lg text-center">
+                    <div class="countdown-number" id="days">0</div>
+                    <div class="countdown-label" id="daysLabel">Days</div>
+                </div>
+                <div class="countdown-card p-6 rounded-lg text-center">
+                    <div class="countdown-number" id="hours">0</div>
+                    <div class="countdown-label" id="hoursLabel">Hours</div>
+                </div>
+                <div class="countdown-card p-6 rounded-lg text-center">
+                    <div class="countdown-number" id="minutes">0</div>
+                    <div class="countdown-label" id="minutesLabel">Minutes</div>
+                </div>
+                <div class="countdown-card p-6 rounded-lg text-center">
+                    <div class="countdown-number" id="seconds">0</div>
+                    <div class="countdown-label" id="secondsLabel">Seconds</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personalization Section -->
+        <section class="w-full max-w-2xl mb-12 scroll-animate">
+            <div class="bg-white bg-opacity-10 backdrop-blur-md border-2 border-yellow-400 rounded-2xl p-8">
+                <h2 class="text-white text-2xl md:text-3xl font-bold text-center mb-6" id="personalizeTitle">Share the Joy!</h2>
+
+                <div class="flex flex-col gap-4">
+                    <input
+                        type="text"
+                        id="nameInput"
+                        placeholder="नाम लिखें"
+                        class="w-full px-5 py-4 rounded-lg text-center text-base md:text-lg font-semibold"
+                    />
+
+                    <button id="createShareBtn" class="btn-primary w-full px-6 py-3 rounded-lg font-bold text-base md:text-lg">
+                        <i class="fas fa-gift mr-2"></i>
+                        <span id="createShareLabel">Create & Share</span>
+                    </button>
+                </div>
+
+                <p class="text-white text-center text-sm mt-4" id="shareHintText">Send personalized Eid wishes to your loved ones!</p>
+            </div>
+        </section>
+
+        <!-- Eidi Collection Section -->
+        <section class="w-full max-w-2xl scroll-animate">
+            <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-md border-2 border-yellow-400 rounded-2xl p-8 text-center">
+                <h2 class="text-white text-2xl md:text-3xl font-bold mb-4" id="eidiTitle">Eidi Collection</h2>
+                <p class="text-white text-sm md:text-base mb-8" id="eidiSubtitle">Bless us with your generous Eidi</p>
+
+                <button id="eidiBtn" class="btn-primary w-full px-6 py-4 rounded-lg font-bold text-base md:text-lg mb-4">
+                    <i class="fas fa-hand-holding-usd mr-2"></i>
+                    <span id="eidiBtnLabel">Give me Eidi</span>
+                </button>
+
+                <p class="text-yellow-300 text-xs" id="upiHintText">Easy payments • Safe & Secure</p>
+                Name:- Mohd Imran
+                <p class="text-yellow-300 text-xs" id="upiHintText">
+                Bank Name:- Bank of Baroda</p>
+<p class="text-yellow-300 text-xs" id="upiHintText">
+                Account Number:- 57988100011128</p>
+<p class="text-yellow-300 text-xs" id="upiHintText">
+                IFSC Code:- BARB0ASHIYA</p>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="modal items-center justify-center">
+        <div class="modal-content">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-white text-2xl font-bold" id="paymentTitle">Select Payment Method</h3>
+                <button id="closeModal" class="text-yellow-400 text-2xl cursor-pointer hover:scale-125 transition">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Payment Options -->
+            <div class="payment-option" onclick="handlePayment('upi')">
+                <i class="fas fa-mobile-alt"></i>
+                <span id="upiLabel">UPI Payment</span>
+            </div>
+
+            <div class="payment-option" onclick="handlePayment('phonepe')">
+                <i class="fas fa-wallet"></i>
+                <span id="phonepeLabel">PhonePe</span>
+            </div>
+
+            <div class="payment-option" onclick="handlePayment('paytm')">
+                <i class="fas fa-mobile-alt"></i>
+                <span id="paytmLabel">Paytm</span>
+            </div>
+
+            <div class="payment-option" onclick="handlePayment('googlepay')">
+                <i class="fas fa-google"></i>
+                <span id="googlepayLabel">Google Pay</span>
+            </div>
+
+            <div class="payment-option" onclick="handlePayment('bhim')">
+                <i class="fas fa-rupiah"></i>
+                <span id="bhimLabel">BHIM UPI</span>
+            </div>
+
+            <!-- QR Code Section -->
+            <div class="mt-8 pt-8 border-t border-yellow-400 border-opacity-30">
+                <p class="text-white mb-4 font-semibold text-center" id="qrLabel">Scan UPI QR Code</p>
+                <div class="qr-container">
+                    <div class="qr-code">
+                        <div class="text-center">
+                            <i class="fas fa-qrcode text-4xl text-gray-400 mb-2"></i>
+                            <p class="text-gray-500 text-sm">UPI QR Code</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-xs mt-2" id="qrHintText">Replace with your actual QR code image</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<img src="qr-code.png" alt="QR Code" class="48px"
+    <!-- Audio Element -->
+    <audio id="naatAudio" preload="none">
+        <source src="Ede.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- JavaScript -->
+    <script>
+        // ==================== Translations ====================
+        const translations = {
+            en: {
+                greetingText: "{name} Wishes You a Very Happy",
+                blessingText: "May your day be filled with joy, peace, and prosperity!",
+                countdownTitle: "Eid Countdown",
+                daysLabel: "Days",
+                hoursLabel: "Hours",
+                minutesLabel: "Minutes",
+                secondsLabel: "Seconds",
+                personalizeTitle: "Share the Joy!",
+                createShareLabel: "Create & Share",
+                shareHintText: "Send personalized Eid wishes to your loved ones!",
+                eidiTitle: "Eidi Collection",
+                eidiSubtitle: "Bless us with your generous Eidi",
+                eidiBtnLabel: "Give me Eidi",
+                upiHintText: "Easy UPI payments • Safe & Secure",
+                audioLabel: "Naat On",
+                shareLabel: "Share",
+                paymentTitle: "Select Payment Method",
+                upiLabel: "UPI Payment",
+                phonepeLabel: "PhonePe",
+                paytmLabel: "Paytm",
+                googlepayLabel: "Google Pay",
+                bhimLabel: "BHIM UPI",
+                qrLabel: "Scan UPI QR Code",
+                qrHintText: "Replace with your actual QR code image",
+            },
+            hi: {
+                greetingText: "{name} आपको ईद की बहुत-बहुत मुबारकबाद देता है",
+                blessingText: "आपका दिन खुशी, शांति और समृद्धि से भरा हो!",
+                countdownTitle: "ईद गणना",
+                daysLabel: "दिन",
+                hoursLabel: "घंटे",
+                minutesLabel: "मिनट",
+                secondsLabel: "सेकंड",
+                personalizeTitle: "खुशियां बांटें!",
+                createShareLabel: "बनाएं और शेयर करें",
+                shareHintText: "अपने प्रियजनों को व्यक्तिगत ईद की शुभकामनाएं भेजें!",
+                eidiTitle: "ईदी संग्रह",
+                eidiSubtitle: "अपनी उदार ईदी से हमें आशीर्वाद दें",
+                eidiBtnLabel: "मुझे ईदी दें",
+                upiHintText: "आसान यूपीआई भुगतान • सुरक्षित",
+                audioLabel: "नात चालू",
+                shareLabel: "साझा करें",
+                paymentTitle: "भुगतान विधि चुनें",
+                upiLabel: "यूपीआई भुगतान",
+                phonepeLabel: "फोनपे",
+                paytmLabel: "पेटीएम",
+                googlepayLabel: "गूगल पे",
+                bhimLabel: "भीम यूपीआई",
+                qrLabel: "यूपीआई क्यूआर कोड स्कैन करें",
+                qrHintText: "अपने वास्तविक क्यूआर कोड छवि से बदलें",
+            },
+            ur: {
+                greetingText: "{name} آپ کو عید کی بہت بہت مبارکیاں",
+                blessingText: "آپ کا دن خوشی، امن اور خوشحالی سے معمور ہو!",
+                countdownTitle: "عید کاؤنٹ ڈاؤن",
+                daysLabel: "دن",
+                hoursLabel: "گھنٹے",
+                minutesLabel: "منٹ",
+                secondsLabel: "سیکنڈ",
+                personalizeTitle: "خوشیاں بانٹیں!",
+                createShareLabel: "بنائیں اور شیئر کریں",
+                shareHintText: "اپنے پیاروں کو ذاتی عید کی دعائیں بھیجیں!",
+                eidiTitle: "عیدی کا مجموعہ",
+                eidiSubtitle: "اپنی سخی عیدی سے ہمیں برکت دیں",
+                eidiBtnLabel: "مجھے عیدی دیں",
+                upiHintText: "آسان یوپی آئی ادائیگی • محفوظ",
+                audioLabel: "نعت آن",
+                shareLabel: "شیئر کریں",
+                paymentTitle: "ادائیگی کا طریقہ منتخب کریں",
+                upiLabel: "یوپی آئی ادائیگی",
+                phonepeLabel: "فون پے",
+                paytmLabel: "پے ٹی ایم",
+                googlepayLabel: "گوگل پے",
+                bhimLabel: "بھیم یوپی آئی",
+                qrLabel: "یوپی آئی کیو آر کوڈ اسکین کریں",
+                qrHintText: "اپنے اصل کیو آر کوڈ امیج سے بدلیں",
+            }
+        };
+
+        // ==================== State Management ====================
+        let currentLanguage = 'en';
+        let audioPlaying = false;
+        let userName = "Your Friend";
+
+        // ==================== Initialize ====================
+        function init() {
+            createStars();
+            parseURLParams();
+            updateTranslations();
+            startCountdown();
+            setupEventListeners();
+        }
+
+        // ==================== Create Floating Stars ====================
+        function createStars() {
+            const container = document.getElementById('starsContainer');
+            const starCount = window.innerWidth > 768 ? 50 : 20;
+
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * window.innerWidth + 'px';
+                star.style.top = Math.random() * window.innerHeight + 'px';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                container.appendChild(star);
+            }
+        }
+
+        // ==================== Parse URL Parameters ====================
+        function parseURLParams() {
+            const params = new URLSearchParams(window.location.search);
+            const name = params.get('name');
+            if (name) {
+                userName = decodeURIComponent(name);
+            }
+            updateGreeting();
+        }
+
+        // ==================== Update Greeting ====================
+        function updateGreeting() {
+            const greetingTemplate = translations[currentLanguage].greetingText;
+            const greeting = greetingTemplate.replace('{name}', userName);
+            document.getElementById('greetingText').textContent = greeting;
+        }
+
+        // ==================== Update All Translations ====================
+        function updateTranslations() {
+            const lang = translations[currentLanguage];
+
+            updateGreeting();
+            document.getElementById('blessingText').textContent = lang.blessingText;
+            document.getElementById('countdownTitle').textContent = lang.countdownTitle;
+            document.getElementById('daysLabel').textContent = lang.daysLabel;
+            document.getElementById('hoursLabel').textContent = lang.hoursLabel;
+            document.getElementById('minutesLabel').textContent = lang.minutesLabel;
+            document.getElementById('secondsLabel').textContent = lang.secondsLabel;
+            document.getElementById('personalizeTitle').textContent = lang.personalizeTitle;
+            document.getElementById('createShareLabel').textContent = lang.createShareLabel;
+            document.getElementById('shareHintText').textContent = lang.shareHintText;
+            document.getElementById('eidiTitle').textContent = lang.eidiTitle;
+            document.getElementById('eidiSubtitle').textContent = lang.eidiSubtitle;
+            document.getElementById('eidiBtnLabel').textContent = lang.eidiBtnLabel;
+            document.getElementById('upiHintText').textContent = lang.upiHintText;
+            document.getElementById('audioLabel').textContent = audioPlaying ? (currentLanguage === 'en' ? 'Naat Off' : currentLanguage === 'hi' ? 'नाट बंद' : 'نعت آف'):
+            document.getElementById('shareLabel').textContent = lang.shareLabel;
+            document.getElementById('paymentTitle').textContent = lang.paymentTitle;
+            document.getElementById('upiLabel').textContent = lang.upiLabel;
+            document.getElementById('phonepeLabel').textContent = lang.phonepeLabel;
+            document.getElementById('paytmLabel').textContent = lang.paytmLabel;
+            document.getElementById('googlepayLabel').textContent = lang.googlepayLabel;
+            document.getElementById('bhimLabel').textContent = lang.bhimLabel;
+            document.getElementById('qrLabel').textContent = lang.qrLabel;
+            document.getElementById('qrHintText').textContent = lang.qrHintText;
+        }
+
+        // ==================== Countdown Timer ====================
+        function startCountdown() {
+            const eidDate = new Date('2026-03-21T00:00:00').getTime();
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = eidDate - now;
+
+                if (distance < 0) {
+                    document.getElementById('days').textContent = '0';
+                    document.getElementById('hours').textContent = '0';
+                    document.getElementById('minutes').textContent = '0';
+                    document.getElementById('seconds').textContent = '0';
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = String(days).padStart(2, '0');
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            }
+
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        }
+
+        // ==================== Event Listeners ====================
+        function setupEventListeners() {
+            // Language Selector
+            document.getElementById('languageSelect').addEventListener('change', (e) => {
+                currentLanguage = e.target.value;
+                updateTranslations();
+            });
+
+            // Audio Toggle
+            document.getElementById('audioToggle').addEventListener('click', () => {
+                const audio = document.getElementById('naatAudio');
+                const label = document.getElementById('audioLabel');
+
+                if (audioPlaying) {
+                    audio.pause();
+                    audioPlaying = false;
+                    label.textContent = currentLanguage === 'en' ? 'Naat On' : currentLanguage === 'hi' ? 'नाट ऑन' : 'نعت آن';
+                } else {
+                    audio.play().catch(err => showToast('Unable to play audio'));
+                    audioPlaying = true;
+                    label.textContent = currentLanguage === 'en' ? 'Naat Off' : currentLanguage === 'hi' ? 'नाट बंद' : 'نعت آف';
+                }
+            });
+
+            // Share Button
+            document.getElementById('shareBtn').addEventListener('click', shareCurrentPage);
+
+            // Create & Share Button
+            document.getElementById('createShareBtn').addEventListener('click', createAndShare);
+
+            // Eidi Button
+            document.getElementById('eidiBtn').addEventListener('click', openPaymentModal);
+
+            // Close Modal
+            document.getElementById('closeModal').addEventListener('click', closePaymentModal);
+            document.getElementById('paymentModal').addEventListener('click', (e) => {
+                if (e.target.id === 'paymentModal') closePaymentModal();
+            });
+        }
+
+        // ==================== Share Functions ====================
+        function shareCurrentPage() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Eid Mubarak!',
+                    text: `${userName} wishes you a very happy Eid!`,
+                    url: window.location.href,
+                }).catch(err => console.log('Share cancelled'));
+            } else {
+                showToast('Share not supported on your browser');
+            }
+        }
+
+        function createAndShare() {
+            const nameInput = document.getElementById('nameInput').value.trim();
+            if (!nameInput) {
+                showToast('Please enter your name');
+                return;
+            }
+
+            const shareUrl = `${window.location.origin}${window.location.pathname}?name=${encodeURIComponent(nameInput)}`;
+
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Eid Mubarak!',
+                    text: `${nameInput} wishes you a very happy Eid! Click to see the greeting.`,
+                    url: shareUrl,
+                }).catch(err => console.log('Share cancelled'));
+            } else {
+                // Fallback: Copy to clipboard
+                navigator.clipboard.writeText(shareUrl).then(() => {
+                    showToast('Link copied to clipboard! Share it manually.');
+                }).catch(() => {
+                    showToast('Unable to copy link');
+                });
+            }
+        }
+
+        // ==================== Payment Modal ====================
+        function openPaymentModal() {
+            document.getElementById('paymentModal').classList.add('active');
+        }
+
+        function closePaymentModal() {
+            document.getElementById('paymentModal').classList.remove('active');
+        }
+
+        function handlePayment(method) {
+            const upiId = '8433280099@axl'; // Replace with your UPI ID
+            const payeeName = 'Eid Fund';
+            const amount = '100'; // Default amount, can be made dynamic
+
+            const upiLink = `upi://pay?pa=${upiId}&pn=${encodeURIComponent(payeeName)}&am=${amount}&tr=EidMubarak&tn=Eidi`;
+
+            switch(method) {
+                case 'upi':
+                    window.location.href = upiLink;
+                    break;
+                case 'phonepe':
+                    window.open(`https://www.phonepe.com`, '_blank');
+                    break;
+                case 'paytm':
+                    window.open(`https://paytm.com`, '_blank');
+                    break;
+                case 'googlepay':
+                    window.location.href = upiLink;
+                    break;
+                case 'bhim':
+                    window.open(`https://bhim.apl.gov.in`, '_blank');
+                    break;
+            }
+
+            showToast('Opening payment method...');
+            closePaymentModal();
+        }
+
+        // ==================== Toast Notification ====================
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.textContent = message;
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.style.animation = 'slideInUp 0.3s ease reverse';
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+
+        // ==================== Scroll Animation ====================
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+
+        // ==================== Initialize on Load ====================
+        window.addEventListener('load', init);
+        window.addEventListener('resize', () => {
+            if (window.innerHeight * window.innerWidth > 800000) {
+                createStars();
+            }
+        });
+    </script>
+</body>
+</html>
